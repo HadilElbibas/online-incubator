@@ -15,7 +15,7 @@
         <th>Actions</th>
     </tr>
     
-    @foreach ($Trainers as $Trainer)
+    @foreach ($trainers as $Trainer)
     <tr>
         <td> {{$Trainer->id}}</td>
         <td> {{$Trainer->name}}</td>

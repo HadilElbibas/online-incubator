@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }} :: Admin</title>
+    <title>{{ config('app.name') }} :: Admin</title>
 
     <!-- Scripts -->
 	<script src="{{ asset('js/app.js') }}" defer></script>
@@ -33,12 +33,21 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
+                <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <li>
                     <a href="{{ url('admin/news') }}">News</a>
                     </li>
+                   
+                    <li>
+                    <a href="{{ url('admin/events') }}">Events</a>
+                    </li>
+                    
+                    <li>
+                    <a href="{{ url('admin/trainers') }}">Trainers</a>
+                    </li>
                 </ul>
-
+                
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->

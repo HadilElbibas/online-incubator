@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Trainer;
+use App\NewsItem;
+use App\Event;
 
 class HomeController extends Controller
 {
@@ -25,7 +28,13 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return view('admin.home');
+        $trainers = Trainer::count();
+        $news = NewsItem::count();
+        $events = Event::count();
+        return view('admin.home')
+            ->with('news_count', $news)
+            ->with('trainers_count', $trainers)
+            ->with('events_count',$events);
     }
 
 }

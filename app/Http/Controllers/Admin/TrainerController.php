@@ -12,7 +12,7 @@ class TrainerController extends Controller
     {
         $trainers = Trainer::all();
 
-        return view('admin/trianers/index')->with('trainers', $trainers);
+        return view('admin/trainers/index')->with('trainers', $trainers);
     }
 
     public function create()
