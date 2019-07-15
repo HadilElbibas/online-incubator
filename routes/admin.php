@@ -39,8 +39,9 @@ Route::group(['namespace' => 'Admin'], function() {
     Route::post('events','EventController@store');
     Route::get('events','EventController@index');
     Route::get('events/{id}/edit','EventController@edit');
+    Route::get('events/{id}','EventController@show');
     Route::patch('events/{id}','EventController@update');
-    // Route::delete('events/{id}','EventController@destroy');
+    Route::delete('events/{id}','EventController@destroy');
 
 
     //Trainers Routs:-

@@ -22,9 +22,9 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+    <nav class="navbar navbar-expand-md navbar-dark navbar-laravel bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand" href="{{ url('admin') }}">
                 {{ config('app.name', 'Laravel') }}
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -35,21 +35,24 @@
                 <!-- Left Side Of Navbar -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
-                    <li>
-                    <a href="{{ url('admin/news') }}">News</a>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{ url('admin/news') }}">News</a>
                     </li>
                    
-                    <li>
-                    <a href="{{ url('admin/events') }}">Events</a>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{ url('admin/events') }}">Events</a>
                     </li>
                     
-                    <li>
-                    <a href="{{ url('admin/trainers') }}">Trainers</a>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{ url('admin/trainers') }}">Trainers</a>
                     </li>
                 </ul>
                 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    <a  class="nav-link" href="{{url('/')}}">Web Pag</a>
+                    </li>
                     <!-- Authentication Links -->
                     @if (Auth::guard('admin')->guest())
                         <li class="nav-item">

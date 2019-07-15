@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
-<div class="card mb-3">
-    @foreach($events as $event)
+@foreach($events as $event)
+  <div class="card mb-3">
             <img src="{{ asset($event->image ) }}" class="card-img-top" alt="Event">
             <div class="card-body">
               <h5 class="card-title">{{ $event->title }}</h5>
@@ -10,6 +10,5 @@
             </div>
           </div>
  @endforeach
- </div>
  @endsection
                  

@@ -1,5 +1,8 @@
 <?php
 
+Route::get('profile/edit', 'Trainer\ProfileController@edit');
+Route::patch('profile', 'Trainer\ProfileController@update');
+
 Route::group(['namespace' => 'Trainer'], function() {
     Route::get('/', 'HomeController@index')->name('trainer.dashboard');
 

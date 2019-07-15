@@ -36,6 +36,12 @@ class EventController extends Controller
         return redirect('admin/events');
     }
 
+    public function show($id)
+    {
+        $event = Event::find($id);
+        return view('admin.events.show', compact('event'));
+    }
+
 
     public function edit($id)
     {
@@ -54,10 +60,12 @@ class EventController extends Controller
         return redirect('admin/event');
     }
 
-    // public function destroy($id)
-    // {
-    // $event->delete();
-    // return redirect('admin/event');
-    // }
+    public function destroy($id)
+    {
+        $event = Event::find($id);
+
+        $event->delete();
+        return redirect('admin/events');
+    }
 
 }

@@ -31,6 +31,8 @@ Route::get('news','Guest\NewsItemController@index');
 
 //Visitor Event Route:-
 Route::get('events','Guest\EventController@index');
+
+Route::get('trainers', 'Guest\TrainerController@index');
  
-//Frountint
-Route::get('home','Gest\HomeController@home');
+//Frontend
+Route::get('home','Guest\HomeController@home');
