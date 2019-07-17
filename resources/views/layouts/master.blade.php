@@ -46,7 +46,6 @@
               Logins
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Start Up</a>
               <a class="dropdown-item" href="{{url('trainer/login')}}">Trainer</a>
               <a class="dropdown-item" href="#">Work Space</a>
             </div>

@@ -31,6 +31,40 @@ class TrainerController extends Controller
         $trainer->image = $image_path;
         $trainer->save();
 
-        return redirect('admin/triners');
+        return redirect('admin/trainers');
+    }
+
+    public function edit($id)
+    {
+        $trainer = Trainer::find($id);
+
+        return view('admin/trainers/edit')->with('trainer', $trainer);
+    }
+
+    public function update($id)
+    {
+        request()->validate([
+            'email' => 'required'
+        ]);
+        
+        $trainer = Trainer::find($id);
+
+       
+        $trainer->name = request()->name;
+        $trainer->email = request()->email;
+        $trainer->bio = request()->bio;
+
+        $trainer->save();
+
+        return redirect('admin/trainers');
+    }
+
+
+    public function destroy($id)
+    {
+        $trainer = Trainer::find($id);
+
+        $trainer->delete();
+        return redirect('admin/trainers');
     }
 }
