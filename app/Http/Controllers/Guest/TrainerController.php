@@ -10,6 +10,8 @@ class TrainerController extends Controller
 {
     public function index()
     {
-        return view('guest/trainers/index')->with('trainers', Trainer::all());
+        $trainers = Trainer::paginate();
+
+        return view('guest.trainers.index')->with('trainers', $trainers);
     }
 }

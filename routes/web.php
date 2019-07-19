@@ -23,7 +23,7 @@ Route::get('/', 'Guest\HomeController@index');
     // Route::delete('news','NewsItemController@delete');
 
 
-    
+
 
 //Visitor News Route:-
 
@@ -33,6 +33,8 @@ Route::get('news','Guest\NewsItemController@index');
 Route::get('events','Guest\EventController@index');
 
 Route::get('trainers', 'Guest\TrainerController@index');
- 
+
 //Frontend
 Route::get('home','Guest\HomeController@home');
+
+Route::get('trainers', 'Guest\TrainerController@index');
