@@ -24,8 +24,12 @@
         <td> <img height="120" src="{{ asset('/storage/' . $Trainer->image ) }}"></td>
         
         <td>
-             <a href="{{ url('admin/Trainers/' .$Trainer->id . '/edit') }}" class="btn btn-warning">Edit informaion</a>
-             {{-- <a href="{{ url('admin/news/' . $newsitem->id ) }}" class="btn btn-danger">Delete</a> --}}
+             <a href="{{ url('admin/trainers/' .$Trainer->id . '/edit') }}" class="btn btn-warning">Edit informaion</a>
+             <form action="{{ url('admin/trainers/' .$Trainer->id) }} " method="post" style="display: inline">
+                @csrf
+                @method('DELETE')
+                <input type="submit" class="btn btn-danger" value="Delete">
+            </form>
         </td>
     </tr>    
         @endforeach

@@ -1,12 +1,21 @@
 @extends('layouts.master')
 
 @section('content')
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div> 
+@endif
 <div class="card">
     <div class="card-header">
         <h3>Edit your bio </h3>
     </div>
     <div class="card-body">
-    <form action="{{ url('trainer/profile') }}" method="post">
+    <form action="{{ url('admin/trainers/' . $trainer->id) }}" method="post">
         @csrf
         @method('PATCH')
        

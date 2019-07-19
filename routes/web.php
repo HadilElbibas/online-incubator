@@ -13,25 +13,12 @@
 
 Route::get('/', 'Guest\HomeController@index');
 
-//News Route:-
-
-    // Route::get('news/create','NewsItemController@create');
-    // Route::post('news','NewsItemController@store');
-    // Route::get('news','NewsItemController@index');
-    // Route::get('news/{id}/edit','NewsItemController@edit');
-    // Route::patch('news/{id}','NewsItemController@update');
-    // Route::delete('news','NewsItemController@delete');
-
-
-
-
 //Visitor News Route:-
 
 Route::get('news','Guest\NewsItemController@index');
 
 //Visitor Event Route:-
 Route::get('events','Guest\EventController@index');
-
 Route::get('trainers', 'Guest\TrainerController@index');
 
 //Frontend

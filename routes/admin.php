@@ -48,4 +48,7 @@ Route::group(['namespace' => 'Admin'], function() {
     Route::get('trainers', 'TrainerController@index');
     Route::get('trainers/create', 'TrainerController@create');
     Route::post('trainers', 'TrainerController@store');
+    Route::get('trainers/{id}/edit', 'TrainerController@edit');
+    Route::patch('trainers/{id}', 'TrainerController@update');
+    Route::delete('trainers/{id}', 'TrainerController@destroy');
 });

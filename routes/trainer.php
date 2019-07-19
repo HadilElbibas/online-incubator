@@ -2,6 +2,8 @@
 
 Route::get('profile/edit', 'Trainer\ProfileController@edit');
 Route::patch('profile', 'Trainer\ProfileController@update');
+Route::delete('index/{id}','Trainer\ProfileController@destroy');
+
 
 Route::group(['namespace' => 'Trainer'], function() {
     Route::get('/', 'HomeController@index')->name('trainer.dashboard');

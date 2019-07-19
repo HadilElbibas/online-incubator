@@ -14,4 +14,5 @@ class TrainerController extends Controller
 
         return view('guest.trainers.index')->with('trainers', $trainers);
     }
+
 }
