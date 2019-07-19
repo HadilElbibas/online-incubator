@@ -36,6 +36,11 @@ return [
     */
 
     'guards' => [
+        'startup' => [
+            'driver'   => 'session',
+            'provider' => 'startups',
+        ],
+
         'trainer' => [
             'driver'   => 'session',
             'provider' => 'trainers',
@@ -76,6 +81,11 @@ return [
     */
 
     'providers' => [
+        'startups' => [
+            'driver' => 'eloquent',
+            'model'  => App\Startup::class,
+        ],
+
         'trainers' => [
             'driver' => 'eloquent',
             'model'  => App\Trainer::class,
@@ -113,6 +123,12 @@ return [
     */
 
     'passwords' => [
+        'startups' => [
+            'provider' => 'startups',
+            'table'    => 'password_resets',
+            'expire'   => 60,
+        ],
+
         'trainers' => [
             'provider' => 'trainers',
             'table'    => 'password_resets',
