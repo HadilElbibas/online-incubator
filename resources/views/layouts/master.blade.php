@@ -18,7 +18,7 @@
           <a class="nav-link" href="{{url('news')}}">News<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="{{url('trainer')}}">Trainers</a>
+          <a class="nav-link " href="{{url('trainers')}}">Trainers</a>
         </li>
 
         <li class="nav-item">
@@ -36,9 +36,11 @@
         @endauth
       </ul>
       <ul class="ml-auto navbar-nav">
-        <li class="nav-item">
-          <a href="{{ url('startup/register') }}" class="btn btn-info mr-2">Signup as Startup</a>
-        </li>
+        @guest('startup')
+          <li class="nav-item">
+            <a href="{{ url('startup/register') }}" class="btn btn-info mr-2">Signup as Startup</a>
+          </li>
+        @endguest
         <li>
           <div class="dropdown">
             <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -46,7 +48,8 @@
               Logins
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="{{url('trainer/login')}}">Trainer</a>
+              <a class="dropdown-item" href="{{ url('startup/login') }}">Start Up</a>
+              <a class="dropdown-item" href="{{ url('trainer/login') }}">Trainer</a>
               <a class="dropdown-item" href="#">Work Space</a>
             </div>
           </div>
@@ -91,6 +94,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+  @yield('scripts')
 </body>
 
 </html>

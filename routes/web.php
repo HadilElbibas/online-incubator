@@ -20,6 +20,8 @@ Route::get('news','Guest\NewsItemController@index');
 //Visitor Event Route:-
 Route::get('events','Guest\EventController@index');
 Route::get('trainers', 'Guest\TrainerController@index');
- 
+
 //Frontend
 Route::get('home','Guest\HomeController@home');
+
+Route::get('trainers', 'Guest\TrainerController@index');

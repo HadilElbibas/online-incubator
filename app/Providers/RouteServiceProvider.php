@@ -39,6 +39,8 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapStartupRoutes();
+
         $this->mapTrainerRoutes();
 
         $this->mapAdminRoutes();
@@ -74,7 +76,24 @@ class RouteServiceProvider extends ServiceProvider
              ->middleware(['web'])
              ->namespace($this->namespace)
              ->group(base_path('routes/trainer.php'));
+    }    
+    
+    /**
+     * Define the "startup" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapStartupRoutes()
+    {
+        Route::prefix('startup')
+             ->middleware(['web'])
+             ->namespace($this->namespace)
+             ->group(base_path('routes/startup.php'));
     }
+
+
 
 
 
