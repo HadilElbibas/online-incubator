@@ -30,8 +30,10 @@ Route::group(['namespace' => 'Admin'], function() {
     Route::post('news','NewsItemController@store');
     Route::get('news','NewsItemController@index');
     Route::get('news/{id}/edit','NewsItemController@edit');
+    Route::get('news/{id}','NewsItemController@show');
     Route::patch('news/{id}','NewsItemController@update');
-    // Route::delete('news/{id}','NewsItemtController@destroy');
+    Route::delete('news/{id}','NewsItemController@destroy');
+
 
 
     //Event Routs:-

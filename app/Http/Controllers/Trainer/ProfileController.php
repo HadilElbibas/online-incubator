@@ -15,18 +15,5 @@ class ProfileController extends Controller
         return view('trainer/profile/edit')->with('trainer', $trainer);
     }
 
-    public function update()
-    {
-        $trainer = auth('trainer')->user();
-
-       
-        $trainer->name = request()->name;
-        $trainer->email = request()->email;
-        $trainer->bio = request()->bio;
-
-        $trainer->save();
-
-        return redirect('/');
-    }
 
 }

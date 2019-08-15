@@ -23,14 +23,22 @@
             <div class="label"> Name </div>
          <input type="text" name="name" value="{{ $trainer->name}}"> 
          </div>
+
          <div class="form-group">
                 <div class="label"> Email </div>
          <input type="text" name="email" value="{{ $trainer->email}}">
          </div>  
+
+         <div class="form-group">
+                <div class="label"> Password </div>
+             <input type="text" name="name" value="{{ $trainer->password}}"> 
+             </div>
+
          <div class="form-group">
                 <div class="label"> Bio </div>
          <textarea name="bio" id="" cols="30" rows="10">{{ $trainer->bio }}</textarea>
          </div>
+         
          <div class="form-group"> 
          <input type="submit" class="btn btn-primary">
          </div>

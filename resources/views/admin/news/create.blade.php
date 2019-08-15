@@ -18,7 +18,7 @@
             <label> News Iamge </label>
             <input type="file" name="image" >
             </div>    
-            <input type="submit" value="Create"> 
+            <input type="submit" value="Create" class="btn btn-success"> 
          </form>
 @endsection
 

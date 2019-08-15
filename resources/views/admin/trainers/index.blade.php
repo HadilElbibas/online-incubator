@@ -10,6 +10,7 @@
         <th>ID</th>
         <th>Trainer_Name</th>
          <th>Trainer_email</th>
+         <th>Trainer_password</th>
         <th>Trainer_Bio</th>
         <th>Trainer_photo</th>
         <th>Actions</th>
@@ -19,12 +20,13 @@
     <tr>
         <td> {{$Trainer->id}}</td>
         <td> {{$Trainer->name}}</td>
-        <td> {{$Trainer->Bio}}</td>
         <td> {{$Trainer->email}}</td>
-        <td> <img height="120" src="{{ asset('/storage/' . $Trainer->image ) }}"></td>
+        <td> {{$Trainer->password}}</td>
+        <td> {{$Trainer->Bio}}</td>
+        <td> <img height="100" src="{{ asset('/storage/' . $Trainer->image ) }}"></td>
         
         <td>
-             <a href="{{ url('admin/trainers/' .$Trainer->id . '/edit') }}" class="btn btn-warning">Edit informaion</a>
+             <a href="{{ url('admin/trainers/' .$Trainer->id . '/edit') }}" class="btn btn-warning">Edit info</a>
              <form action="{{ url('admin/trainers/' .$Trainer->id) }} " method="post" style="display: inline">
                 @csrf
                 @method('DELETE')

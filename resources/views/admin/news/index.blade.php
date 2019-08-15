@@ -22,10 +22,17 @@
         <td> <img height="120" src="{{ asset('/storage/' . $newsitem->image ) }}"></td>
         
         <td>
-             <a href="{{ url('admin/news/' . $newsitem->id . '/edit') }}" class="btn btn-warning">Edit</a>
-             {{-- <a href="{{ url('admin/news/' . $newsitem->id ) }}" class="btn btn-danger">Delete</a> --}}
-        </td>
-    </tr>    
+            <a href="{{ url('admin/news/' . $newsitem->id ) }}" class="btn btn-info">View</a>
+            <a href="{{ url('admin/news/' . $newsitem->id . '/edit') }}" class="btn btn-warning">Edit</a>
+            <form action="{{ url('admin/news/' . $newsitem->id) }} " method="post" style="display: inline">
+               @csrf
+               @method('DELETE')
+               <input type="submit" class="btn btn-danger" value="Delete">
+           </form>
+       </td>
+    </tr>  
+
+      
         @endforeach
     </table>
 @endsection

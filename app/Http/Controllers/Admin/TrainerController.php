@@ -27,6 +27,7 @@ class TrainerController extends Controller
         $trainer = new Trainer;
         $trainer->name = request()->name;
         $trainer->email = request()->email;
+        $trainer->password = request()->password;
         $trainer->bio = request()->bio;
         $trainer->image = $image_path;
         $trainer->save();
@@ -52,8 +53,8 @@ class TrainerController extends Controller
        
         $trainer->name = request()->name;
         $trainer->email = request()->email;
+        $trainer->password = request()->password;
         $trainer->bio = request()->bio;
-
         $trainer->save();
 
         return redirect('admin/trainers');

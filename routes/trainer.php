@@ -1,7 +1,9 @@
 <?php
-
+Route::get('profile/create','Trainer\ProfileController@create');
 Route::get('profile/edit', 'Trainer\ProfileController@edit');
+Route::post('profile','Trainer\ProfileController@store');
 Route::patch('profile', 'Trainer\ProfileController@update');
+Route::get('profile/{id}','Trainer\ProfileController@show');
 Route::delete('index/{id}','Trainer\ProfileController@destroy');
 
 

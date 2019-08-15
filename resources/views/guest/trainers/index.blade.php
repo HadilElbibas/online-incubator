@@ -6,13 +6,13 @@
       @foreach ($trainers as $trainer)
       <div class="col-3">
           <div class="card">
-            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+            <img src="{{ asset('/storage/' .$trainer->image)}}" class="card-img-top" style="width: 100%; " alt = " tranier image">
             <div class="card-body">
               <h5 class="card-title">{{ $trainer->name }}</h5>
               <p class="card-text">{{ $trainer->bio }}</p>
 
               @auth('startup')
-              <button type="button" class="btn btn-primary" onclick="messageTrainer({{ $trainer }})">
+              <button type="button" class="btn btn-success" onclick="messageTrainer({{ $trainer }})">
                 Send Message
               </button>
               @endauth

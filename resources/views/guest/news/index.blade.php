@@ -1,17 +1,17 @@
-@extends('layouts.master')
+ @extends('layouts.master')
 @section('content')
 <div class="card mb-3">
-    @foreach($news as $newsitem)
+  @foreach($news as $newsitem)
     <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="{{ asset($newsitem->image ) }}" class="card-img" alt="Event">
+            <img src="{{ asset('/storage/' .$newsitem->image ) }}" class="card-img" alt="News">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">{{ $newsitem->title }}</h5>
+              <h5 class="card-title">{{  $newsitem->title }}</h5>
               <p class="card-text">{{ $newsitem->description }}</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <p class="card-text"><small class="text-muted">wiriter:Hadil Elbibas</small></p>
             </div>
           </div>
         </div>
@@ -19,6 +19,3 @@
  @endforeach
  </div>
  @endsection
-                 
-
- 

@@ -19,6 +19,8 @@ Route::get('news','Guest\NewsItemController@index');
 
 //Visitor Event Route:-
 Route::get('events','Guest\EventController@index');
+
+//visitor Trainer Route:-
 Route::get('trainers', 'Guest\TrainerController@index');
 
 //Frontend
