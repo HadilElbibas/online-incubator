@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Guest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\NewsItem;
+use App\Event;
 
 class HomeController extends Controller
 {
@@ -25,15 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $news = NewsItem::all();
+        $news = NewsItem::latest()->take(10)->get();
+        $events = Event::latest()->take(10)->get();
 
-        return view('guest/home')->with('news', $news);  
-    }
-    
-    public function home()
-    {
-        $news = NewsItem::all();
-
-        return view('guest/home')->with('news', $news);  
+        return view('guest/home')->with('news', $news)->with('events', $events);
     }
 }
