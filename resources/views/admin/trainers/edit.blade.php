@@ -31,7 +31,7 @@
 
          <div class="form-group">
                 <div class="label"> Password </div>
-             <input type="text" name="name" value="{{ $trainer->password}}"> 
+             <input type="text" name="password" value="{{ $trainer->password}}"> 
              </div>
 
          <div class="form-group">

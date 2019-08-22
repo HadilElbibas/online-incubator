@@ -10,8 +10,10 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">{{  $newsitem->title }}</h5>
-              <p class="card-text">{{ $newsitem->description }}</p>
+              <p> BKDBJLBAvjabvalkb ..... </p>
+              {{-- <p class="card-text">{{ $newsitem->description }}</p> --}}
               <p class="card-text"><small class="text-muted">wiriter:Hadil Elbibas</small></p>
+              <a class="nav-link " href="#"> Read more </a>
             </div>
           </div>
         </div>

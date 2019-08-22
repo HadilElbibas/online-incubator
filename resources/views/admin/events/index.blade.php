@@ -9,7 +9,6 @@
     <tr>
         <th>ID</th>
         <th>Event_Title</th>
-        <th>Event_Description</th>
         <th>Event_Image</th>
         <th>Actions</th>
     </tr>
@@ -18,7 +17,6 @@
     <tr>
         <td> {{$event->id}}</td>
         <td> {{$event->title}}</td>
-        <td> {{$event->description}}</td>
         <td> <img height="120" src="{{ asset('/storage/' . $event->image ) }}"></td>
         
         <td>

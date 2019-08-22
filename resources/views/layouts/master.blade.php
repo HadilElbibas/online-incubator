@@ -41,7 +41,7 @@
             <ul class="ml-auto navbar-nav">
                 @guest('startup')
                 <li class="nav-item">
-                    <a href="{{ url('startup/register') }}" class="btn btn-info mr-2">Signup as Startup</a>
+                    <a href="{{ url('startup/register') }}" class="btn btn-info mr-2">Signup as a Startup</a>
                 </li>
                 @endguest
                 <li>

@@ -11,7 +11,7 @@
         <th>Trainer_Name</th>
          <th>Trainer_email</th>
          <th>Trainer_password</th>
-        <th>Trainer_Bio</th>
+        {{-- <th>Trainer_Bio</th> --}}
         <th>Trainer_photo</th>
         <th>Actions</th>
     </tr>
@@ -22,16 +22,17 @@
         <td> {{$Trainer->name}}</td>
         <td> {{$Trainer->email}}</td>
         <td> {{$Trainer->password}}</td>
-        <td> {{$Trainer->Bio}}</td>
+        {{-- <td> {{$Trainer->Bio}}</td> --}}
         <td> <img height="100" src="{{ asset('/storage/' . $Trainer->image ) }}"></td>
         
         <td>
-             <a href="{{ url('admin/trainers/' .$Trainer->id . '/edit') }}" class="btn btn-warning">Edit info</a>
-             <form action="{{ url('admin/trainers/' .$Trainer->id) }} " method="post" style="display: inline">
+            <a href="{{ url('admin/trainers/'.$Trainer->id ) }}" class="btn btn-info">View</a>
+            <a href="{{ url('admin/trainers/' .$Trainer->id . '/edit') }}" class="btn btn-warning">Edit info</a>
+        <form action="{{ url('admin/trainers/' .$Trainer->id) }} " method="post" style="display: inline">
                 @csrf
                 @method('DELETE')
                 <input type="submit" class="btn btn-danger" value="Delete">
-            </form>
+         </form>
         </td>
     </tr>    
         @endforeach

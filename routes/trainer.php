@@ -7,6 +7,7 @@ Route::get('profile/{id}','Trainer\ProfileController@show');
 Route::delete('index/{id}','Trainer\ProfileController@destroy');
 
 
+
 Route::group(['namespace' => 'Trainer'], function() {
     Route::get('/', 'HomeController@index')->name('trainer.dashboard');
 

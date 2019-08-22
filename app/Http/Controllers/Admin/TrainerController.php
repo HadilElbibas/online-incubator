@@ -60,6 +60,15 @@ class TrainerController extends Controller
         return redirect('admin/trainers');
     }
 
+    public function show($id)
+    {
+        $trainer = Trainer::find($id);
+        return view('admin/trainers/show', compact('trainer'));
+    }
+
+  
+
+
 
     public function destroy($id)
     {

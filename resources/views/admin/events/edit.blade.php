@@ -1,5 +1,4 @@
 @extends('admin.layouts.app')
-
 @section('content')
 <div class="card">
     <div class="card-header">
@@ -13,7 +12,7 @@
     <input type="text" name="event_title" value="{{ $event->title}}">
     </div>
     <div class="form-group">
-    <textarea type="text" name="event_description" value="{{ $event->description}}">
+    <textarea type="text" name="event_description" value="{{ $event->description}}"></textarea>
     </div>
     <div class="form-group">
     <input type="submit" class="btn btn-primary">

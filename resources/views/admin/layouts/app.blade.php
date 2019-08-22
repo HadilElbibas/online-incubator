@@ -46,6 +46,9 @@
                     <li class="nav-item">
                     <a class="nav-link" href="{{ url('admin/trainers') }}">Trainers</a>
                     </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{ url('admin/stories') }}">Stories</a>
+                    </li>
                 </ul>
                 
                 <!-- Right Side Of Navbar -->

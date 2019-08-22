@@ -44,8 +44,8 @@ Route::group(['namespace' => 'Admin'], function() {
     Route::get('events/{id}','EventController@show');
     Route::patch('events/{id}','EventController@update');
     Route::delete('events/{id}','EventController@destroy');
-
-
+    
+    
     //Trainers Routs:-
     Route::get('trainers', 'TrainerController@index');
     Route::get('trainers/create', 'TrainerController@create');
@@ -53,4 +53,16 @@ Route::group(['namespace' => 'Admin'], function() {
     Route::get('trainers/{id}/edit', 'TrainerController@edit');
     Route::patch('trainers/{id}', 'TrainerController@update');
     Route::delete('trainers/{id}', 'TrainerController@destroy');
+    Route::get('trainers/{id}','TrainerController@show');
+
+
+
+    //Stories Routs:-
+    Route::get('stories/create','StoryController@create');
+    Route::post('stories','StoryController@store');
+    Route::get('stories','StoryController@index');
+    Route::get('stories/{id}/edit','StoryController@edit');
+    Route::get('stories/{id}','StoryController@show');
+    Route::patch('stories/{id}','StoryController@update');
+    Route::delete('stories/{id}','StoryController@destroy');
 });

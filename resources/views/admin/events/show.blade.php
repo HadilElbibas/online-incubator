@@ -4,10 +4,11 @@
 
 @section('content')
 <div class="card">
-    <div class="card-header">
+    <div class="card-header"><b>
     {{-- {{ dd($event)}} --}}
         {{ $event->title }}
-    </div>
+   </b></div>
+   <img src="{{ asset('/storage/' .$event->image ) }}" class="card-img-top" alt="Event">
 
     <div class="card-body">
         {{ $event->description }}    
@@ -16,5 +17,6 @@
     <div class="card-footer">
         {{ $event->created_at }}
     </div>
+    <a  class="btn btn-warning" href="{{url('admin/events')}}">Back</a>
 </div>
 @endsection

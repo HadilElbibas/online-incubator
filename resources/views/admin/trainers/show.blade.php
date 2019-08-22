@@ -5,18 +5,21 @@
 @section('content')
 <div class="card">
     <div class="card-header"><b>
-        {{-- {{ dd($news)}} --}}
-        {{ $news_item->title }}
+        {{-- {{ dd($Trainer)}} --}}
+        {{ $Trainer->name }}
     </b></div>
 
-    <img src="{{ asset('/storage/' .$news_item->image ) }}" class="card-img-top" alt="News">
+    <img src="{{ asset('/storage/'  .$Trainer->image ) }}" class="card-img-top" alt="Trainer image">
         <div class="card-body">
-            {{  $news_item->description }}    
+            {{  $Trainer->Bio }}    
         </div>
 
     <div class="card-footer">
-        {{  $news_item->created_at }}
+        <div>
+        {{  $Trainer->email }}
+        </div>
+        {{$Trainer->password}}
     </div>
-    <a  class="btn btn-warning" href="{{url('admin/news')}}">Back</a>
+    <a  class="btn btn-warning" href="{{url('admin/Trainer')}}">Back</a>
 </div>
 @endsection

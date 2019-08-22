@@ -38,23 +38,24 @@ class NewsItemController extends Controller
 
     public function show($id)
     {
-        $news_item = news_item::find($id);
+        $news_item = NewsItem::find($id);
         return view('admin.news.show', compact('news_item'));
     }
 
     public function edit($id)
     {
         //with->newsitem this is the varl name we want to work on
-        return view('admin.news.edit')->with('newsitem', news_item::find($id)); 
+        return view('admin.news.edit')->with('newsitem', NewsItem::find($id)); 
     }
 
     public function update($id)
     {
         
-        $news_item = news_item::find($id);
+        $news_item = NewsItem::find($id);
 
         $news_item->title = request()->news_title;
         $news_item->description = request()->news_description;
+        // $news_item->image= request()->news_image;
         $news_item->save();
         
         return redirect('admin/news');

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\NewsItem;
 use App\Event;
+use App\Trainer;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,8 @@ class HomeController extends Controller
     {
         $news = NewsItem::latest()->take(10)->get();
         $events = Event::latest()->take(10)->get();
+        $trainers = Trainer::latest()->take(10)->get();
 
-        return view('guest/home')->with('news', $news)->with('events', $events);
+        return view('guest/home')->with('news', $news)->with('events', $events)->with('trainers', $trainers);
     }
 }
