@@ -33,6 +33,7 @@ class StoryController extends Controller
         $story = new Story;
         $story->title = request()->title;
         $story->description = request()->description;
+        $story->link = request()->link;
         
         if (request()->file('image')) {
             $image_path = request()->file('image')->store('images', 'public');
@@ -50,9 +51,10 @@ class StoryController extends Controller
         $story = story::find($id);
         $story->title = request()->story_title;
         $story->description = request()->story_description;
+        $story->link = request()->story_link;
         $story->save();
         
-        return redirect('admin/story');
+        return redirect('admin/stories');
     }
 
 

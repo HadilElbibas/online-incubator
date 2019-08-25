@@ -14,12 +14,13 @@ class CreateStoriesTable extends Migration
     public function up()
     {
         Schema::create('stories', function (Blueprint $table) {
+            $table->bigIncrements('id');
 
             $table->string('title');
             $table->text('description');
+            $table->text('link');
             $table->string('image')->nullable();
             
-            // $table->bigIncrements('id');
             $table->timestamps();
         });
     }

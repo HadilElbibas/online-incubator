@@ -11,7 +11,6 @@
         <th>Trainer_Name</th>
          <th>Trainer_email</th>
          <th>Trainer_password</th>
-        {{-- <th>Trainer_Bio</th> --}}
         <th>Trainer_photo</th>
         <th>Actions</th>
     </tr>
@@ -22,7 +21,6 @@
         <td> {{$Trainer->name}}</td>
         <td> {{$Trainer->email}}</td>
         <td> {{$Trainer->password}}</td>
-        {{-- <td> {{$Trainer->Bio}}</td> --}}
         <td> <img height="100" src="{{ asset('/storage/' . $Trainer->image ) }}"></td>
         
         <td>

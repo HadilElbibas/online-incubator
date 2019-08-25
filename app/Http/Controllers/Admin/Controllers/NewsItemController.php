@@ -29,6 +29,7 @@ class NewsItemController extends Controller
 
         $news_item = new NewsItem;
         $news_item->title = request()->title;
+        $news_item->writer = request()->writer;
         $news_item->description = request()->description;
         $news_item->image = $image_path;
         $news_item->save();
@@ -54,6 +55,7 @@ class NewsItemController extends Controller
         $news_item = NewsItem::find($id);
 
         $news_item->title = request()->news_title;
+        $news_item->writer = request()->news_writer;
         $news_item->description = request()->news_description;
         // $news_item->image= request()->news_image;
         $news_item->save();

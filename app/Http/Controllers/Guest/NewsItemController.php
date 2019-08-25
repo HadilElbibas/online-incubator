@@ -14,4 +14,9 @@ class NewsItemController extends Controller
        
         return view('guest/news/index')->with('news', $news);
     }
+
+    public function show($id)
+    {
+        return view('guest/news/show')->with('newsitem', NewsItem::find($id));
+    }
 }

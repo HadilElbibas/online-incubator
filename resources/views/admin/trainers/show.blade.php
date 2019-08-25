@@ -6,19 +6,19 @@
 <div class="card">
     <div class="card-header"><b>
         {{-- {{ dd($Trainer)}} --}}
-        {{ $Trainer->name }}
+        {{ $trainer->name }}
     </b></div>
 
-    <img src="{{ asset('/storage/'  .$Trainer->image ) }}" class="card-img-top" alt="Trainer image">
+    <img src="{{ asset('/storage/'  .$trainer->image ) }}" class="card-img-top" style="width: 30rem;" alt="Trainer image">
         <div class="card-body">
-            {{  $Trainer->Bio }}    
+            {{  $trainer->bio }}    
         </div>
 
     <div class="card-footer">
         <div>
-        {{  $Trainer->email }}
+        {{  $trainer->email }}
         </div>
-        {{$Trainer->password}}
+        {{$trainer->password}}
     </div>
     <a  class="btn btn-warning" href="{{url('admin/Trainer')}}">Back</a>
 </div>

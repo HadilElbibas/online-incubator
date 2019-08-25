@@ -14,6 +14,12 @@
         <label> Story description </label>
         <textarea name="description" cols="30" rows="10"></textarea>
     </div>
+
+    <div class="form-group">
+        <label> Story Link </label>
+        <input type="text" name="link">
+    </div>
+    
    
     <div class="form-group">
         <label> Story Photo </label>

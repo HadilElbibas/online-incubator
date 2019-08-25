@@ -12,16 +12,22 @@
 */
 
 Route::get('/', 'Guest\HomeController@index');
+Route::get('whyossos', 'Guest\HomeController@create');
+Route::get('connect', 'Guest\HomeController@show');
+
 
 //Visitor News Route:-
 
 Route::get('news','Guest\NewsItemController@index');
+Route::get('news/{id}','Guest\NewsItemController@show');
 
 //Visitor Event Route:-
 Route::get('events','Guest\EventController@index');
+Route::get('events/{id}','Guest\EventController@show');
 
 //visitor Trainer Route:-
 Route::get('trainers', 'Guest\TrainerController@index');
+Route::get('trainers/{id}', 'Guest\TrainerController@show');
 
 //Frontend
 Route::get('home','Guest\HomeController@home');

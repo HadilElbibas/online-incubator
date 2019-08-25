@@ -16,13 +16,13 @@
 
     <div  class="form-group">
             <label>Trainer email password </label>
-            <input type="text" name="pasword">
+            <input type="text" name="password">
         </div>
 
     
     <div class="form-group">
         <label> Trainer Bio </label>
-        <textarea name="Bio" cols="30" rows="10"></textarea>
+        <textarea name="bio" cols="50" rows="40"></textarea>
     </div>
    
     <div class="form-group">

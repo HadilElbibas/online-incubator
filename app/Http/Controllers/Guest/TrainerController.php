@@ -15,4 +15,9 @@ class TrainerController extends Controller
         return view('guest.trainers.index')->with('trainers', $trainers);
     }
 
+    public function show($id)
+    {
+        return view('guest/trainers/show')->with('trainer', Trainer::find($id));
+    }
+
 }

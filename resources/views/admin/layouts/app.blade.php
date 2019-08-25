@@ -54,7 +54,7 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                    <a  class="nav-link" href="{{url('/')}}">Web Pag</a>
+                    <a  class="nav-link" href="{{url('/')}}">Web Page</a>
                     </li>
                     <!-- Authentication Links -->
                     @if (Auth::guard('admin')->guest())

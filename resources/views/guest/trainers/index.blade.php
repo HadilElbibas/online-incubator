@@ -1,5 +1,10 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .checked {
+      color: orange;
+    }
+    </style>
 @extends('layouts.master')
-
 @section('content')
   @if ($trainers->count())
     <div class="row">
@@ -9,8 +14,14 @@
             <img src="{{ asset('/storage/' .$trainer->image)}}" class="card-img-top" style="width: 100%; " alt = " tranier image">
             <div class="card-body">
               <h5 class="card-title">{{ $trainer->name }}</h5>
-              <p class="card-text">{{ $trainer->bio }}</p>
-
+              {{-- <p class="card-text">{{ $trainer->bio }}</p> --}}
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <a href="{{url('trainers/' . $trainer->id)}}" class="btn btn-success" > Know more about me</a>
               @auth('startup')
               <button type="button" class="btn btn-success" onclick="messageTrainer({{ $trainer }})">
                 Send Message

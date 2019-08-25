@@ -9,6 +9,7 @@
     <tr>
         <th>ID</th>
         <th>stories_Title</th>
+        <th width="20%" >stories_Link</th>
         <th>stories_Image</th>
         <th>Actions</th>
     </tr>
@@ -17,6 +18,7 @@
     <tr>
         <td> {{$story->id}}</td>
         <td> {{$story->title}}</td>
+        <td> {{$story->link}}</td>
         <td> <img height="120" src="{{ asset('/storage/' . $story->image ) }}"></td>
         
         <td>

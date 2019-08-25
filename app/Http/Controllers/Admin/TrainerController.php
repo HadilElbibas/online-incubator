@@ -63,7 +63,7 @@ class TrainerController extends Controller
     public function show($id)
     {
         $trainer = Trainer::find($id);
-        return view('admin/trainers/show', compact('trainer'));
+        return view('admin/trainers/show', compact('trainer'))->with('trainer',$trainer);
     }
 
   

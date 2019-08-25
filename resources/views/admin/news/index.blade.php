@@ -8,7 +8,8 @@
 <table class="table">
     <tr>
         <th>ID</th>
-        <th>News_Title</th>
+        <th width="20%">News_Title</th>
+        <th>News_writer</th>
         <th>News_Image</th>
         <th>Actions</th>
     </tr>
@@ -17,6 +18,7 @@
     <tr>
         <td> {{$newsitem->id}}</td>
         <td> {{$newsitem->title}}</td>
+        <td> {{$newsitem->writer}}</td>
         <td> <img height="120" src="{{ asset('/storage/' . $newsitem->image ) }}"></td>
         
         <td>

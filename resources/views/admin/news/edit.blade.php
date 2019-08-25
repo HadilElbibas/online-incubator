@@ -12,6 +12,11 @@
     <div class="form-group">
     <input type="text" name="news_title" value="{{ $newsitem->title}}">
     </div>
+
+    <div class="form-group">
+    <input type="text" name="news_writer" value="{{ $newsitem->writer}}">
+    </div>
+
     <div class="form-group">
     <textarea  type="text" name="news_description" value="{{ $newsitem->description}}"></textarea>
     </div>

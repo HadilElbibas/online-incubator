@@ -4,17 +4,20 @@
 
 @section('content')
 <div class="card">
-    <img src="{{ asset('/storage/' .$stories->image ) }}" class="card-img-top" alt="News">
+    <img src="{{ asset('/storage/' .$story->image ) }}" class="card-img-top" alt="News">
     <div class="card-header"><b>
-        {{-- {{ dd($stories)}} --}}
-        {{ $stories->title }}
+        {{-- {{ dd($story)}} --}}
+        {{ $story->title }}
     </b></div>
         <div class="card-body">
-            {{  $stories->description }}    
+            {{  $story->description }} 
+            {{$story->link}}   
         </div>
 
+        
+
     <div class="card-footer">
-        {{  $stories->created_at }}
+        {{  $story->created_at }}
     </div>
     <a  class="btn btn-warning" href="{{url('admin/stories')}}">Back</a>
 </div>

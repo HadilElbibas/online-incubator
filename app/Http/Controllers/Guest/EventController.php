@@ -14,4 +14,10 @@ class EventController extends Controller
        
         return view('guest/event/index')->with('events', $events);
     }
+
+ public function show($id)
+    {
+        return view('guest/event/show')->with('event', Event::find($id));
+    }
+
 }

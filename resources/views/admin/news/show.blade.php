@@ -11,7 +11,8 @@
 
     <img src="{{ asset('/storage/' .$news_item->image ) }}" class="card-img-top" alt="News">
         <div class="card-body">
-            {{  $news_item->description }}    
+            {{  $news_item->description }} 
+            {{  $news_item->writer }} 
         </div>
 
     <div class="card-footer">

@@ -9,15 +9,19 @@
 <form action="{{ url('admin/stories/' . $story->id) }}" method="post">
     @csrf
     {{ method_field('PATCH') }}
+    
     <div class="form-group">
     <input type="text" name="story_title" value="{{ $story->title}}">
     </div>
+
     <div class="form-group">
-    <textarea  type="text" name="story_description" value="{{ $story->description}}"></textarea>
+    <textarea  type="text" name="story_description">{{ $story->description}}</textarea>
     </div>
-    {{-- <div class="form-group">
-    <input type="file" name="image" value="{{asset('/storage/' . $story->image)}}" >
-    </div> --}}
+
+    <div class="form-group">
+    <input type="text" name="story_link" value="{{$story->link}}">
+    </div>
+
     <div class="form-group">
     <input type="submit" value="Edit" class="btn btn-primary">
     </div>

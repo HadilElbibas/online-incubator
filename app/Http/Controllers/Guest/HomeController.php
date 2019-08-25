@@ -33,4 +33,13 @@ class HomeController extends Controller
 
         return view('guest/home')->with('news', $news)->with('events', $events)->with('trainers', $trainers);
     }
+
+    public function show()
+    {
+        return view('guest.connect.connect');
+    }
+    public function create()
+    {
+        return view('guest.whyossos');
+    }
 }
